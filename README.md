@@ -28,20 +28,20 @@ This project implements a hybrid control system for spacecraft proximity operati
 This plot shows the initial configuration, the static obstacles (grey), and the target spacecraft. The RRT* algorithm is initializing to generate a path to the rendezvous point.
 
 <p align="center">
-  <img src=".setup.png" width="600" alt="Initial setup showing chaser, obstacles, and target">
+  <img src="setup.png" width="600" alt="Initial setup showing chaser, obstacles, and target">
 </p>
 
 ### Midway Approach
 The chaser (blue box) has calculated a path (purple) to the rendezvous point and is actively traversing it using the PID controller (green actual path). Note how the actual path slightly deviates from the planned path due to simulated noise or control lag.
 
 <p align="center">
-  <img src=".midway.png" width="600" alt="Spacecraft midpoint approach to the target">
+  <img src="midway.png" width="600" alt="Spacecraft midpoint approach to the target">
 </p>
 
 ### Docked State
 Successful docking achieved. The high-precision PID controller has taken over from the RRT* global planner to zero out the position error between the chaser's docking cone and the target port. The final orientation matches the target's requirements.
 
 <p align="center">
-  <img src=".docked2.png" width="600" alt="Successful spacecraft docking with final alignment">
+  <img src="docked2.png" width="600" alt="Successful spacecraft docking with final alignment">
 </p>
 
