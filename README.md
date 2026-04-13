@@ -16,16 +16,32 @@ This project implements a hybrid control system for spacecraft proximity operati
 * `numpy`
 * `matplotlib`
 * `pandas`
+# Autonomous Spacecraft Docking Simulator
+
+This project implements a hybrid control system for spacecraft proximity operations. It uses **RRT*** for global path planning and a **PID Controller** for high-precision docking.
+
+---
 
 ## Simulation Results
 
-### Planned Path vs Actual Trajectory
-This plot shows the RRT* planned path (purple) and the actual PID-controlled trajectory (green).
+### Docking Setup
+This plot shows the initial configuration, the static obstacles (grey), and the target spacecraft. The RRT* algorithm is initializing to generate a path to the rendezvous point.
 
-![Planned Path](./assets/image_bd9fab.png)
+<p align="center">
+  <img src=".setup.png" width="600" alt="Initial setup showing chaser, obstacles, and target">
+</p>
 
-### Docking Alignment
-The chaser spacecraft successfully aligns its docking cone with the target.
+### Midway Approach
+The chaser (blue box) has calculated a path (purple) to the rendezvous point and is actively traversing it using the PID controller (green actual path). Note how the actual path slightly deviates from the planned path due to simulated noise or control lag.
 
-![Docking Detail](./assets/image_bd9fcd.png)
+<p align="center">
+  <img src=".midway.png" width="600" alt="Spacecraft midpoint approach to the target">
+</p>
+
+### Docked State
+Successful docking achieved. The high-precision PID controller has taken over from the RRT* global planner to zero out the position error between the chaser's docking cone and the target port. The final orientation matches the target's requirements.
+
+<p align="center">
+  <img src=".docked2.png" width="600" alt="Successful spacecraft docking with final alignment">
+</p>
 
